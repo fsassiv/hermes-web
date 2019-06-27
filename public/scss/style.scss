@@ -1,2 +1,12 @@
 @import "./assets/variables";
+@import "./assets/mixins";
+@import "./assets/typography";
 @import "./assets/reset";
+@import "./assets/utilities";
+@import "./assets/app";
+@import "./assets/form-input";
+@import "./assets/animation";
+//PAGES
+@import "./pages/index";
+@import "./pages/c/index";
+@import "./pages/c//schedules";

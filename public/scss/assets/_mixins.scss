@@ -1,0 +1,35 @@
+@mixin minBP($bp) {
+  @media only screen and (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin maxBP($bp) {
+  @media only screen and (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin gradient-bg-h {
+  background: -webkit-gradient(linear, left top, right top, from(#e15550), to(#ef7f55));
+  background: linear-gradient(to right, #e15550, #ef7f55);
+}
+
+@mixin gradient-bg-v {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e15550), to(#ef7f55));
+  background: linear-gradient(to bottom, #e15550, #ef7f55);
+}
+
+@mixin gradient-bdr {
+  border: none;
+  border-left-width: 10px;
+  border-left-style: solid;
+  -o-border-image: linear-gradient(to bottom, #e15550, #ef7f55);
+  border-image: -webkit-gradient(linear, left top, left bottom, from(#e15550), to(#ef7f55));
+  border-image: linear-gradient(to bottom, #e15550, #ef7f55);
+  border-image-slice: 1;
+}
+
+@mixin overlay {
+  background-color: rgba(#3c3341, 0.8);
+}

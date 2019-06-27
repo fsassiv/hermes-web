@@ -1,0 +1,37 @@
+.logo-fade {
+  -webkit-animation-name: logo-fade;
+  animation-name: logo-fade;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  &.delay-two {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+  }
+  &.delay-one {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+  }
+}
+
+@-webkit-keyframes logo-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes logo-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

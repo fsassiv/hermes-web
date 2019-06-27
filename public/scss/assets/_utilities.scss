@@ -1,0 +1,24 @@
+.is-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.gradient-bg-h {
+  @include gradient-bg-h;
+}
+
+.gradient-bg-v {
+  @include gradient-bg-v;
+}
+
+.rounded-7 {
+  border-radius: 7px;
+}
+
+.component-bg {
+  background-color: #edf0f8;
+}
+
+.text-bold {
+  color: #3c3341;
+  font-weight: bold;
+}

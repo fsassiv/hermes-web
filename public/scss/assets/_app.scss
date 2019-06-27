@@ -1,0 +1,111 @@
+.app {
+  &__main {
+    position: absolute;
+    bottom: 0;
+    right: 2vw;
+    height: 85vh;
+    max-height: 85vh;
+    width: 75vw;
+    background-color: white;
+    z-index: 100;
+    padding: 35px 40px 60px;
+    overflow: hidden;
+  }
+  &__navigation {
+    position: absolute;
+    top: 25vh;
+    left: 2vw;
+    width: 21vw;
+    height: 400px;
+    &-title {
+      color: white;
+      font-size: 27px;
+      font-weight: bold;
+      line-height: 37px;
+      display: inline-block;
+      border-bottom: 3px solid #888791;
+    }
+    &-list {
+      margin-top: 5%;
+    }
+    &-item {
+    }
+    &-link {
+      height: 48px;
+      padding-left: 20px;
+      color: rgba(#ffffff, 0.5);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+      background: transparent;
+      &.active {
+        @include gradient-bg-h;
+        color: white;
+      }
+      & > .icon {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      & > text {
+        font-size: 16px;
+      }
+    }
+  }
+  &-title {
+    font-weight: bold;
+    color: #3c3341;
+    font-size: 27px;
+    display: inline-block;
+    &.with-bar {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 6px;
+        width: 45%;
+        background-color: #e86b53;
+      }
+    }
+    &.white-text {
+      color: white;
+    }
+    &.big {
+      font-size: 34px;
+    }
+    &.small {
+      font-size: 25px;
+    }
+  }
+  &__route-title {
+    padding-bottom: 5px;
+  }
+  &__content {
+    margin-top: 20px;
+    position: relative;
+    height: 60vh;
+    max-height: 60vh;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    &-item {
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      overflow: auto;
+      &.half {
+        width: 48%;
+      }
+    }
+  }
+}

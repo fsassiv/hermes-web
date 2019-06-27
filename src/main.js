@@ -1,7 +1,17 @@
+import "@fortawesome/fontawesome-free/js/all.min";
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import AppLogoSmall from "./assets/Logo-small.vue";
+import AppLogoSmallWhite from "./assets/Logo-small-white.vue";
+import ActionBtn from "./components/BtnAction.vue";
+import VueTheMask from "vue-the-mask";
+
+Vue.component("AppLogoSmall", AppLogoSmall);
+Vue.component("AppLogoSmallWhite", AppLogoSmallWhite);
+Vue.component("ActionBtn", ActionBtn);
+Vue.use(VueTheMask);
 
 new Vue({
   el: "#app",

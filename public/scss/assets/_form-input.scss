@@ -1,0 +1,63 @@
+.btn {
+  @include gradient-bg-h;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-box-shadow: 0 3px 6px rgba(#e54515, 0.4);
+  box-shadow: 0 3px 6px rgba(#e54515, 0.4);
+  height: 50px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 25px;
+  min-width: 140px;
+  padding-left: 25px;
+  padding-right: 45px;
+  cursor: pointer;
+  &--main {
+    position: absolute !important;
+    right: 30px;
+    bottom: 30px;
+    & > .btn-icon {
+      background-color: rgba(#ffffff, 0.15);
+    }
+  }
+  &.has-icon {
+    position: relative;
+  }
+  &-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -14px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(#ffffff, 0.25);
+    color: white;
+  }
+}
+
+input,
+textarea {
+  background-color: white;
+  &::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #888791;
+  }
+  &:-ms-input-placeholder {
+    font-size: 14px;
+    color: #888791;
+  }
+  &::-ms-input-placeholder {
+    font-size: 14px;
+    color: #888791;
+  }
+  &::placeholder {
+    font-size: 14px;
+    color: #888791;
+  }
+}
