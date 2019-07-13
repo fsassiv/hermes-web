@@ -1,0 +1,15 @@
+.company {
+  &__table {
+    color: #3c3341;
+    .app__tdata {
+      padding-left: 20px;
+    }
+  }
+  &__column {
+    border-radius: 7px;
+    background-color: white;
+    padding: 20px 30px;
+    width: 100%;
+    min-height: 300px;
+  }
+}

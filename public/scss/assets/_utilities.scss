@@ -22,3 +22,125 @@
   color: #3c3341;
   font-weight: bold;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.flex-i-center {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.half {
+  width: 49%;
+  &.is-7 {
+    width: 69%;
+  }
+  &.is-6 {
+    width: 59%;
+  }
+  &.is-4 {
+    width: 39%;
+  }
+  &.is-3 {
+    width: 29%;
+  }
+}
+
+ul.member-list {
+  border-top: 1px solid #c9cedb;
+  min-height: 50px;
+  max-height: 85%;
+  overflow-y: auto;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+li.member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 7px;
+  height: 45px;
+  cursor: pointer;
+  border-radius: 7px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+img.member-avatar {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: contain;
+  object-fit: contain;
+  border-radius: 15px;
+  border: 1px solid red;
+}
+
+.member-info {
+  width: 65%;
+}
+
+.member-name {
+  font-size: 12px;
+  line-height: 18px;
+  color: #3c3341;
+}
+.member-jobtitle {
+  font-size: 7px;
+  line-height: 10px;
+  color: #888791;
+}
+.member-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  color: #dbdee9;
+}
+.member-btn svg {
+  color: #443b49;
+  -webkit-transform: scale(0.75);
+  transform: scale(0.75);
+}
+
+.app__white-box {
+  background-color: white;
+  border-radius: 7px;
+  height: 220px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}

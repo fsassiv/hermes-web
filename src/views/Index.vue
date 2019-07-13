@@ -11,7 +11,7 @@
     </div>
 
     <div class="index__login-panel">
-      <AppLogoSmall class="index__login-logo"/>
+      <AppLogoSmall class="index__login-logo" />
       <form @submit.prevent="handleSubmit" class="index__login-form">
         <h4 class="index__login-title app-title with-bar">Login</h4>
         <input
@@ -20,14 +20,14 @@
           id="index__login-username"
           class="index__login-username"
           placeholder="Digite aqui seu ID ou Email…"
-        >
+        />
         <input
           v-model="user.password"
           type="password"
           id="index__login-password"
           class="index__login-password"
           placeholder="Digite aqui sua Senha…"
-        >
+        />
         <div class="index__login-bottom">
           <a href="#" class="index__login-recover-pw">Não lembro minha senha.</a>
           <button @click.prevent="handleSubmit" class="index__login-submit btn has-icon">
@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      this.$router.push("/company/schedules");
+      this.$router.push("/company/home");
     }
   }
 };

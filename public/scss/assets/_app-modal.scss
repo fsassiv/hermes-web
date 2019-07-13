@@ -1,0 +1,262 @@
+.app {
+  &__modal {
+    // &.active {
+    //   z-index: 9999;
+    //   background-color: rgba(#3c3341, 0.8);
+    // }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(#3c3341, 0.8);
+
+    &-box {
+      &.active {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      &.big {
+        height: 95vh;
+      }
+      -webkit-transform: translateY(5%);
+      transform: translateY(5%);
+      -webkit-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
+      position: relative;
+      background-color: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      height: 85vh;
+      width: 50vw;
+      &.small {
+        width: 450px;
+        height: 430px;
+      }
+      & > .header {
+        height: 90px;
+        padding: 20px 20px 0;
+        .title::before {
+          bottom: -5px;
+        }
+      }
+      & > .content {
+        height: 100%;
+        background-color: #edf0f8;
+        padding: 5px 35px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+      & > .footer {
+        height: 60px;
+        padding: 20px 45px;
+      }
+    }
+    &-btn {
+      position: absolute !important;
+      right: 25px;
+      bottom: 30px;
+    }
+    &-menu {
+      background-color: #3c3341;
+      padding: 10px 50px;
+      border-radius: 4px;
+      &-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      &-item {
+        cursor: pointer;
+        font-size: 14px;
+        color: rgba(#ffffff, 0.3);
+        -webkit-transition: color 0.25s ease-out;
+        transition: color 0.25s ease-out;
+        &.active {
+          color: rgba(#ffffff, 1);
+        }
+      }
+    }
+    &-progress {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 70%;
+      .progress {
+        &-counter {
+          margin-right: 15px;
+        }
+        &-bar {
+          background-color: #e5eaf5;
+          height: 5px;
+          width: 100%;
+          border-radius: 3px;
+          overflow: hidden;
+        }
+        &-indicator {
+          -webkit-transition: width 0.25s ease-in;
+          transition: width 0.25s ease-in;
+          height: 100%;
+          @include gradient-bg-h;
+          border-radius: 3px;
+        }
+      }
+    }
+    &-tab-wrapper {
+      height: 100%;
+    }
+  }
+  &__box {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 90%;
+    min-height: 90%;
+    &__resume-description {
+      font-size: 14px;
+      color: #888791;
+    }
+    &__resume-title {
+      font-size: 20px;
+      color: #443b49;
+    }
+    &__resume-top {
+      position: relative;
+      padding: 20px;
+      border-radius: 7px;
+      height: 140px;
+      background-color: white;
+      margin-bottom: 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -5px;
+        width: 10px;
+        height: 60px;
+        border-radius: 5px;
+        background: -webkit-gradient(linear, left top, left bottom, from(#e15550), to(#ef7f55));
+        background: linear-gradient(to bottom, #e15550, #ef7f55);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+    }
+    &__resume-details {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+    &__resume-label {
+      background-color: white;
+      padding: 20px;
+      border-radius: 7px;
+      height: 48px;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      /* justify-content: space-between; */
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+    &__resume-label svg {
+      color: #c9cedb;
+    }
+    &__resume-label .value {
+      margin-left: 10px;
+      font-size: 17px;
+      font-weight: bold;
+      color: #3c3341;
+    }
+    &__resume-members {
+      margin-left: 15px;
+      background-color: white;
+      border-radius: 7px;
+      height: 100%;
+      padding: 10px 15px;
+      width: 100%;
+    }
+    &__resume-members .title {
+      font-size: 14px;
+      color: #3c3341;
+    }
+    &__resume-list {
+      height: 130px;
+      max-height: 130px;
+      overflow-y: auto;
+      padding-right: 5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    &__resume-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 7px;
+      height: 40px;
+      border-radius: 4px;
+      background-color: #edf0f8;
+      margin-bottom: 5px;
+    }
+
+    &__resume-item .avatar {
+      width: 30px;
+      height: 30px;
+      -o-object-fit: contain;
+         object-fit: contain;
+      border-radius: 15px;
+      background-color: red;
+    }
+    &__resume-item .info {
+      margin-left: 15px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+    &__resume-item .name {
+      font-size: 12px;
+    }
+    &__resume-item .jobtitle {
+      font-size: 8px;
+    }
+  }
+}

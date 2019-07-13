@@ -1,16 +1,26 @@
 import "@fortawesome/fontawesome-free/js/all.min";
 import Vue from "vue";
 import App from "./App.vue";
-import router from "./router";
-import store from "./store";
+import router from "./router/router";
+import store from "./store/index";
 import AppLogoSmall from "./assets/Logo-small.vue";
 import AppLogoSmallWhite from "./assets/Logo-small-white.vue";
-import ActionBtn from "./components/BtnAction.vue";
+import ActionBtn from "./components/ActionBtn.vue";
+import AppModal from "./components/modal/AppModal.vue";
+import AppModalConfirmation from "./components/modal/AppModalConfirmation.vue";
+import AppModalBtn from "./components/modal/AppModalBtn.vue";
 import VueTheMask from "vue-the-mask";
+import vSelect from "vue-select";
+import "vue-select/dist/vue-select.css";
 
 Vue.component("AppLogoSmall", AppLogoSmall);
 Vue.component("AppLogoSmallWhite", AppLogoSmallWhite);
 Vue.component("ActionBtn", ActionBtn);
+Vue.component("AppModal", AppModal);
+Vue.component("AppModalBtn", AppModalBtn);
+Vue.component("AppModalConfirmation", AppModalConfirmation);
+Vue.component("v-select", vSelect);
+
 Vue.use(VueTheMask);
 
 new Vue({

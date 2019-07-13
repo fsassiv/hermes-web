@@ -36,16 +36,26 @@ img {
   height: auto;
 }
 
+select {
+  border: none;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+}
+
 button {
   border: none;
 }
 
 ::-webkit-scrollbar {
-  width: 1px;
+  width: 3px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #fa4709;
+  background-color: rgba(#fa4709, 0.75);
 }
 
 // CALENDAR
@@ -74,4 +84,34 @@ button {
 .vdpTimeUnit > input:hover,
 .vdpTimeUnit > input:focus {
   border-bottom-color: #fa4709 !important;
+}
+.vdpComponent {
+  width: 100%;
+}
+.vdpComponent.vdpWithInput > input {
+  display: block;
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(#000000, 0.15);
+  margin-bottom: 5px;
+  font-weight: 200;
+  color: #443b49;
+  padding: 14px;
+  -webkit-box-shadow: 0 0.2em 1.5em rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0.2em 1.5em rgba(0, 0, 0, 0.06);
+}
+.vdpOuterWrap {
+  // height: 325px !important;
+  width: 100% !important;
+}
+.vdpInnerWrap {
+  // height: 325px !important;
+  max-width: unset !important;
+}
+
+.vs__dropdown-toggle {
+  border: none !important;
+  border-radius: 0 !important;
+  width: 100%;
 }

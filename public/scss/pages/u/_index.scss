@@ -1,0 +1,221 @@
+.appointments-tab {
+  background-color: #e5eaf5;
+  position: relative;
+  padding: 25vh 100px 40px 40px;
+}
+.notifications-tab {
+  background-color: white;
+}
+.u {
+  &_index {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  &__header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 95px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 25px;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 60%;
+      background-color: #3c3341;
+      z-index: -1;
+    }
+    &-title {
+      color: white;
+    }
+  }
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #3c3341;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 100;
+  }
+  &__banner {
+    height: 210px;
+    background: grey;
+  }
+  &__menu {
+    width: 38px;
+    height: 38px;
+    border-radius: 19px;
+    background-color: white;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 999;
+    &:hover {
+      width: 150px;
+      .u__menu-opt {
+        opacity: 1;
+      }
+    }
+    &.active {
+      // width: 150px;
+      // height: 160px;
+      border-radius: 21px;
+    }
+    &-img {
+      overflow: hidden;
+      -o-object-fit: cover;
+      object-fit: cover;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border-radius: 17px;
+      top: 3px;
+      left: 3px;
+    }
+    &-opt {
+      position: absolute;
+      top: 4px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 60%;
+      padding-right: 10px;
+      height: calc(100% - 5px);
+      opacity: 0;
+    }
+    &-ctrl {
+      padding: 5px;
+      padding-top: 40px;
+      position: absolute;
+      top: 15%;
+      width: 100%;
+      border-radius: 21px;
+      // display: none;
+      background-color: white;
+      height: 50px;
+      opacity: 0;
+      z-index: -10;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+      &.active {
+        z-index: -1;
+        opacity: 1;
+        height: 120px;
+      }
+      &-btn {
+        font-size: 12px;
+        color: #3c3341;
+        line-height: 18px;
+        display: block;
+        &:first-child {
+          border-top: 1px solid #c9cedb;
+          padding-top: 5px;
+        }
+      }
+      &-logout {
+        position: absolute;
+        right: 15px;
+        bottom: 5px;
+        font-size: 12px;
+        color: #3c3341;
+      }
+    }
+    &-name {
+      font-size: 11px;
+      font-weight: bold;
+      color: #3c3341;
+    }
+    &-settings {
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+}
+
+.tab__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  &-title {
+    line-height: 50px;
+  }
+}
+
+.tab__search {
+  &-wrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: #dbdee9;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    &.active {
+      cursor: initial;
+      width: 200px;
+    }
+  }
+  &-input {
+    width: 100%;
+    height: 100%;
+    padding: 2px 10px;
+    &::-ms-clear {
+      display: none;
+    }
+  }
+  &-icon {
+    position: absolute;
+    right: 12px;
+    top: 13px;
+    color: #3c3341;
+  }
+}

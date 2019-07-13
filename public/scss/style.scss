@@ -4,9 +4,21 @@
 @import "./assets/reset";
 @import "./assets/utilities";
 @import "./assets/app";
+@import "./assets/app-members";
+@import "./assets/app-modal";
+@import "./assets/app-table";
 @import "./assets/form-input";
 @import "./assets/animation";
 //PAGES
 @import "./pages/index";
 @import "./pages/c/index";
-@import "./pages/c//schedules";
+@import "./pages/c/schedules";
+@import "./pages/c/sgnup";
+@import "./pages/c/totem";
+@import "./pages/c/deps";
+@import "./pages/c/companyPanel";
+@import "./pages/u/index";
+@import "./pages/u/schedules";
+@import "./pages/u/notifications";
+//COMPONENTS
+@import "./assets/notification-view";

@@ -1,8 +1,8 @@
 <template>
-  <button @click="$emit('handleClick',options.eventName)" class="btn btn--main has-icon">
-    {{options.text}}
+  <button @click="$emit('handleClick',options.action.event)" class="btn btn--main has-icon">
+    {{options.action.text}}
     <i class="btn-icon btn-action">
-      <i class="fas" :class="'fa-'+options.icon"></i>
+      <i class="fas" :class="'fa-'+options.action.icon"></i>
     </i>
   </button>
 </template>

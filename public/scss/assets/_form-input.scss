@@ -21,6 +21,10 @@
     position: absolute !important;
     right: 30px;
     bottom: 30px;
+    &.left {
+      right: unset;
+      left: 30%;
+    }
     & > .btn-icon {
       background-color: rgba(#ffffff, 0.15);
     }
@@ -44,6 +48,7 @@
 input,
 textarea {
   background-color: white;
+  border: none;
   &::-webkit-input-placeholder {
     font-size: 14px;
     color: #888791;
@@ -59,5 +64,88 @@ textarea {
   &::placeholder {
     font-size: 14px;
     color: #888791;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.app {
+  &__label {
+    font-size: 14px;
+    line-height: 21px;
+    color: #888791;
+    margin-bottom: 12px;
+    font-weight: normal;
+  }
+  &__input,
+  &__textarea {
+    padding: 23px 25px;
+    margin-bottom: 20px;
+    color: #3c3341;
+  }
+  &__input {
+    font-size: 24px;
+    font-weight: bold;
+    &-file {
+      color: #3c3341;
+      border-radius: 4px;
+      border: 1px solid #c9cedb;
+      display: inline-block;
+      width: 70%;
+      font-size: 13px;
+      text-align: center;
+      display: inline-block;
+      padding: 5px 0;
+    }
+  }
+  &__textarea {
+    height: 40%;
+    &.small {
+      height: 30%;
+    }
+  }
+  &__search-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+    & > svg {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 10px;
+    }
+  }
+  &__search-input {
+    background-color: #dbdee9;
+    height: 44px;
+    border-radius: 22px;
+    font-size: 12px;
+    color: #888791;
+    width: 100%;
+    padding: 12px 40px;
+  }
+  &__select {
+    background-color: white;
+    border: none;
+    border-radius: 0;
+    height: 65px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #3c3341;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    &.w-100 {
+      width: 100%;
+    }
   }
 }

@@ -142,4 +142,12 @@
       }
     }
   }
+  &__footer {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background-color: #2a262c;
+    height: 105px;
+    width: 400px;
+  }
 }
