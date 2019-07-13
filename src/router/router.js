@@ -14,6 +14,7 @@ import {
 } from "./CompanyRoutes";
 
 const User = resolve => {
+  // @ts-ignore
   require.ensure(
     ["../views/user/Index.vue"],
     () => {
@@ -137,7 +138,17 @@ const router = new Router({
     {
       path: "/user",
       name: "User",
-      component: User
+      component: User,
+      meta: {
+        modalTitle: "Criar Agendamento",
+        modalComponent: "AppModalNewAppointment",
+        action: {
+          text: "Novo",
+          event: "createAppointment",
+          icon: "plus"
+        },
+        icon: "far fa-calendar"
+      }
     },
     { path: "*", redirect: "/" }
   ]

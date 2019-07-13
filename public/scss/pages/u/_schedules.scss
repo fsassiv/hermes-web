@@ -174,7 +174,19 @@
       -ms-flex-pack: center;
       justify-content: center;
       width: 60%;
-      background-color: rgba(#ef7f55, 0.4);
+
+      background: -webkit-gradient(
+        linear,
+        left top, right top,
+        from(rgba(#e15550, 0.5)),
+        to(rgba(#ef7f55, 0.5))
+      );
+
+      background: linear-gradient(
+        to right,
+        rgba(#e15550, 0.5),
+        rgba(#ef7f55, 0.5)
+      );
       border-top-right-radius: 7px;
       border-bottom-right-radius: 7px;
       &-title {
